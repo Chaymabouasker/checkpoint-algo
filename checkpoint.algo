@@ -1,0 +1,22 @@
+ALGORITHM CHECKPOINT_ALGO
+VAR
+    c:CHAR;
+    nbrv , l , nbrw : INTEGER;
+BEGIN
+    nbrv:=0;
+    l:=0;
+    nbrw:=1;
+    READ(c);
+    WHILE c <>'.' DO 
+    l:=l+1;
+    IF c = ' ' THEN
+    nbrw:=nbrw+1;
+    END_IF;
+    IF ( c='a' or c='A' or c='e' or c='E' or c='i' or c='I' or c='o' or c='O' or c='u' or c='U' c='y' or c='Y' ) THEN
+    nbrv:=nbrv+1;
+    END_IF;
+    END_WHILE;
+    WRITE ('the length of the sentence :',l) ;
+    WRITE ('the number of words in the sentence :',nbrw) ;
+    WRITE ('the number of vowels in the sentence :',nbrv) ;
+END
